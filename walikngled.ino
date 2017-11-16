@@ -1,4 +1,4 @@
-int msg[4]={12,10,8,4};
+int msg[4]={12,10,8,4};// Define an array of pin numbers of Arduino.
 int x;
 void setup() {
 pinMode(12,OUTPUT);
@@ -11,7 +11,7 @@ pinMode(4,OUTPUT);
 void loop() {
   for(x=0;x<=3;x++)
   {
-    digitalWrite(msg[x],HIGH);
+    digitalWrite(msg[x],HIGH);// Light up leds one by one in ascending order.
     delay(10);
     digitalWrite(msg[x],LOW);
     delay(10);
@@ -19,7 +19,7 @@ void loop() {
     for(x=x-1;x>=0;x--)
     {
       
-digitalWrite(msg[x],HIGH);
+digitalWrite(msg[x],HIGH);//Light up leds one by one in descending order.
     delay(10);
     digitalWrite(msg[x],LOW);
     delay(10);
